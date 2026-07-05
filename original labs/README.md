@@ -6,6 +6,12 @@
 - **整理文档另写**:新增 README / STUDY-GUIDE 只做导航、解释和运行建议。
 - **先做自建 labs,再做官方 project**:自建 labs 更小、更线性;官方 project 更接近综合场景。
 
+## 版本控制约定
+
+- 官方 `quiz.md`、`quiz-zh.md`、源码、脚本、Project 2 的 `BadStore_212.iso`、Project 3 的 `projects.zip` 会纳入 Git。
+- 官方 HTML 说明页(`*.htm` / `*.html`)作为本地归档忽略;对应内容已整理到各 project 的 README、STUDY-GUIDE 和 quiz 文件。
+- Project 1/3 的容器构建文件保存在 [docker-p1-p3](docker-p1-p3);本地生成的镜像、临时展开目录和运行目录不纳入 Git。
+
 ## 当前材料
 
 | 目录 | 对应主题 | 用途 |

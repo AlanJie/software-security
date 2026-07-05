@@ -9,10 +9,11 @@
 
 | 文件 | 说明 |
 | --- | --- |
-| `0415bd77-04f5-4eb7-a75e-c2374f3a6038.htm` | 官方 Project 3 说明页面 |
 | `projects.zip` | 官方源码包,包含 `projects/3` 和复用的 `projects/1` 文件 |
 | `quiz.md` | 课程 quiz 题库,包含答案和反馈,有剧透 |
 | `STUDY-GUIDE.md` | 整理版学习指南 |
+
+官方 HTML 说明页作为本地归档忽略;关键流程已整理到本 README、`STUDY-GUIDE.md` 和 `quiz.md`。
 
 本目录保留官方压缩包,不直接展开源码。当前可运行源码已经镜像到
 [../docker-p1-p3/assets/projects/3](../docker-p1-p3/assets/projects/3),并被打进 Docker / Podman 实验镜像。
