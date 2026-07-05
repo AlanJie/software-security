@@ -7,8 +7,7 @@
 labs/module1-bof/SETUP.md
 reports/
 
-# Reference solutions / hints kept out of the public repo by default
-**/.solution/
+# Reference answers kept out of the public repo by default
 labs/**/answer.md
 
 
@@ -38,6 +37,7 @@ labs/**/harness
 
 # Local databases
 *.db
+!labs/module3-sqli/*.db
 *.sqlite
 *.sqlite3
 
