@@ -24,6 +24,12 @@
 | 知识笔记 | [notes/](notes/) |
 | 推荐路线图 | [PLAN.md](PLAN.md) |
 
+## 版本控制约定
+
+- `labs/**/.solution/` 会纳入 Git,作为公开参考解法与修复说明。
+- `labs/**/answer.md` 仍作为个人临时答案忽略。
+- 普通本地数据库文件默认忽略;`labs/module3-sqli/users.db` 是 SQL 注入实验的种子数据库,会纳入 Git。
+
 
 ## 参考
 

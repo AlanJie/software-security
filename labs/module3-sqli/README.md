@@ -12,6 +12,8 @@ python3 app.py
 
 正常登录会显示 `Welcome <name>! role=<role>`,失败显示 `Login failed.`。
 
+`users.db` 是本实验的 SQLite 种子数据库,会随仓库一起版本控制;其他本地 `.db` 文件默认仍被忽略。
+
 ## 目标
 
 让程序输出 `Welcome admin! role=admin`,而你并不知道 admin 的真实密码。

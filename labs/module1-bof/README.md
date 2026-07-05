@@ -29,5 +29,5 @@ python3 exploit.py | ./vuln
 
 ## 卡住了?
 
-本目录下有个 **`.solution/`** 文件夹(本地存在,未纳入 git),里面有**分级提示**
+本目录下有个 **`.solution/`** 文件夹,里面有**分级提示**
 (`HINTS.md`)和完整解法(`exploit.py` + `WALKTHROUGH.md`)。先看提示,再看答案。
