@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+cd "${1:-/work/projects/3}"
+rm -rf klee-out-* klee-last wisdom-alt-sym.o wisdom-alt-sym.bc
+
+if command -v llvm-gcc.cde >/dev/null 2>&1 && ! command -v clang-11 >/dev/null 2>&1; then
+  llvm-gcc.cde -I"$KLEE_INCLUDE" --emit-llvm -c -g wisdom-alt-sym.c
+  klee.cde -exit-on-error wisdom-alt-sym.o
+else
+  cc="${CLANG:-}"
+  if [[ -z "$cc" ]]; then
+    cc="$(command -v clang-11 || command -v clang || true)"
+  fi
+  if [[ -z "$cc" ]]; then
+    echo "clang not found" >&2
+    exit 1
+  fi
+  "$cc" -I"$KLEE_INCLUDE" -emit-llvm -c -g -O0 -Xclang -disable-O0-optnone wisdom-alt-sym.c -o wisdom-alt-sym.bc
+  klee -exit-on-error wisdom-alt-sym.bc
+fi

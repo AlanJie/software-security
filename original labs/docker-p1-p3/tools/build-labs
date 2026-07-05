@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+read -r -a cflags <<< "${LAB_CFLAGS:--O0 -no-pie -fno-stack-protector -include /usr/local/include/legacy-gets.h}"
+
+echo "[project1] rebuilding wisdom-alt-rebuilt"
+cd /work/projects/1
+gcc "${cflags[@]}" -o wisdom-alt-rebuilt wisdom-alt.c
+
+echo "[project3] rebuilding wisdom-alt and wisdom-alt2"
+cd /work/projects/3
+gcc "${cflags[@]}" -o wisdom-alt wisdom-alt.c
+gcc "${cflags[@]}" -o wisdom-alt2 wisdom-alt2.c
+
+file /work/projects/1/wisdom-alt-rebuilt /work/projects/3/wisdom-alt /work/projects/3/wisdom-alt2

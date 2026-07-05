@@ -1,0 +1,97 @@
+# Local-only notes / machine-specific config
+*.local
+*.local.md
+.env
+.env.*
+!.env.example
+labs/module1-bof/SETUP.md
+reports/
+
+# Reference solutions / hints kept out of the public repo by default
+**/.solution/
+labs/**/answer.md
+
+
+# Build outputs / binaries
+*.o
+*.a
+*.so
+*.dylib
+*.dll
+*.out
+a.out
+*.exe
+core
+core.*
+vgcore.*
+*.dSYM/
+build/
+dist/
+compile_commands.json
+
+# Lab compiled targets / payloads
+labs/**/vuln
+labs/**/vuln32
+labs/**/vuln64
+labs/**/harness
+*.bin
+
+# Local databases
+*.db
+*.sqlite
+*.sqlite3
+
+# Fuzzing / sanitizer / coverage artifacts
+labs/**/findings/
+labs/**/corpus/
+labs/**/crashes/
+labs/**/hangs/
+labs/**/queue/
+labs/**/sync/
+labs/**/.cur_input
+crash-*
+leak-*
+timeout-*
+id:*
+*.profraw
+*.profdata
+*.gcda
+*.gcno
+
+# KLEE / symbolic execution artifacts
+klee-out-*/
+klee-last
+*.ktest
+*.err
+assembly.ll
+run.stats*
+run.istats
+messages.txt
+warnings.txt
+
+# Editor / OS
+.vscode/
+.DS_Store
+*:Zone.Identifier
+
+# Python / notebooks
+__pycache__/
+*.pyc
+.pytest_cache/
+.ipynb_checkpoints/
+venv/
+.venv/
+
+# UMD Docker generated / runtime scratch directories
+original labs/docker-p1-p3/.extracted/
+original labs/docker-p1-p3/work/
+
+# Archived web pages generated from course sites; keep markdown summaries instead
+original labs/**/*.htm
+original labs/**/*.html
+
+# VM / disk images: keep source instructions, not bulky binary images
+*.ova
+*.ovf
+*.vmdk
+*.qcow2
